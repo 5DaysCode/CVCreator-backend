@@ -1,23 +1,30 @@
 {
   "name": "cvcreator-backend",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "Backend API for CvCreator built with Express and TypeScript",
+  "main": "src/index.ts",
   "license": "ISC",
-  "description": "",
+  "author": "",
+"scripts": {
+  "dev": "nodemon --watch src -e ts,json --exec \"node -r ts-node/register src/index.ts\"",
+  "start": "node -r ts-node/register src/index.ts",
+  "build": "tsc"
+}
+,
+  "keywords": [],
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "raw-body": "^3.0.1",
     "stripe": "^19.1.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
